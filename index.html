@@ -1,6 +1,26 @@
+<html>
+<head>
+</head>
 <body style="text-align: center;">
-<h1>VoidMaze.com</h1>
-<p style="white-space:pre">
+    <h1>VoidMaze.com</h1>
+    <div id="question">
+        <p style="white-space:pre">
+生命、宇宙以及任何事情的终极答案是？
+
+Answer to the Ultimate Question of Life, The Universe, and Everything ?
+
+生命、宇宙、そして万物についての究極の疑問の答えは？
+        </p>
+        <input id="input"></input>
+        <br/><br/>
+        <button id="btn">Submit</button>
+        <p id="wrong" style="white-space:pre">
+错误答案！
+Wrong Answer!
+間違った答え!
+        </p>
+    </div>
+    <p id="content" style="white-space:pre">
 宙斯没有能耐松开包围住我的
 石砌的网罗
 我忘掉了
@@ -28,5 +48,26 @@
 我们两个在互相寻找
 但愿
 这是等待的最后的日子
-</p>
+    </p>
+    <script type="text/javascript">
+    var question = document.getElementById('question');
+    var input = document.getElementById('input');
+    var btn = document.getElementById('btn');
+    var wrong = document.getElementById('wrong');
+    var content = document.getElementById('content');
+
+    content.style.display = 'none';
+    wrong.style.display = 'none';
+
+    btn.addEventListener('click', function(){
+        if(input.value == "42"){
+            content.style.display = 'block';
+            question.style.display = 'none';
+        }else{
+            wrong.style.display = 'block';
+        }
+    }, false);
+
+    </script>
 </body>
+</html>
